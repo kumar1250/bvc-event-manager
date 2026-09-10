@@ -65,6 +65,7 @@ class FormField(models.Model):
     placeholder = models.CharField(max_length=255, blank=True)
     description = models.TextField(blank=True)
     required = models.BooleanField(default=False)
+    is_unique = models.BooleanField(default=False)
     default_value = models.CharField(max_length=500, blank=True)
 
     min_length = models.PositiveIntegerField(null=True, blank=True)

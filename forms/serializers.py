@@ -23,7 +23,7 @@ class FormFieldSerializer(serializers.ModelSerializer):
     class Meta:
         model = FormField
         fields = [
-            "id", "label", "field_type", "placeholder", "description", "required",
+            "id", "label", "field_type", "placeholder", "description", "required", "is_unique",
             "default_value", "min_length", "max_length", "min_value", "max_value",
             "validation_regex", "order", "options", "depends_on_field", "depends_on_value",
         ]
@@ -39,7 +39,7 @@ class FormFieldReadSerializer(serializers.ModelSerializer):
     class Meta:
         model = FormField
         fields = [
-            "id", "label", "field_type", "placeholder", "description", "required",
+            "id", "label", "field_type", "placeholder", "description", "required", "is_unique",
             "default_value", "min_length", "max_length", "min_value", "max_value",
             "validation_regex", "order", "options", "depends_on_field", "depends_on_value",
         ]
