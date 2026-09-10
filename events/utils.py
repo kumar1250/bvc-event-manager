@@ -20,6 +20,10 @@ def normalize_image_url(url: str) -> str:
         match = re.search(pattern, url)
         if match:
             file_id = match.group(1)
-            return f"https://drive.google.com/uc?export=view&id={file_id}"
+            # `uc?export=view` is unreliable for <img> hotlinking these days -
+            # Google frequently serves an HTML interstitial instead of the
+            # image itself. The `thumbnail` endpoint is served for direct
+            # embedding and works consistently for publicly-shared files.
+            return f"https://drive.google.com/thumbnail?id={file_id}&sz=w1000"
 
     return url
