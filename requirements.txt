@@ -1,0 +1,16 @@
+Django==6.0.7
+djangorestframework==3.17.1
+djangorestframework-simplejwt==5.5.1
+django-cors-headers==4.9.0
+openpyxl==3.1.5
+gunicorn==26.0.0
+python-dotenv==1.2.2
+gspread==6.1.4
+google-auth==2.36.0
+django-filter==24.3
+reportlab==4.2.5
+requests==2.32.3
+dj-database-url==2.3.0
+# Uncomment the driver that matches your DATABASE_URL:
+# psycopg[binary]==3.2.3      # for postgres://
+# mysqlclient==2.2.4          # for mysql://
